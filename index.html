@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mark Oplok</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            /* dark mode background */
+        }
+
+        .calculator {
+            width: 250px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 1px solid #444;
+            /* dark mode border */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: center;
+          /*margin-left: 30px;*/
+        }
+
+        .display {
+            width: 75%;
+            height: 40px;
+            font-size: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            text-align: right;
+            background-color: #444;
+            /* dark mode background */
+            color: #fff;
+          margin-left: 23px;
+            /* dark mode text color */
+        }
+
+        .button {
+            width: 50px;
+            height: 40px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: #444;
+            /* dark mode background */
+            color: #fff;
+          margin-left: 23px;
+          margin-top: 3px;
+            /* dark mode text color */
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #555;
+            /* dark mode hover background */
+        }
+      .equal {
+            width: 210px;
+            height: 40px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #444;
+            /* dark mode background */
+            color: #fff;
+        margin-left: 23px;
+        margin-top: 5px;
+            /* dark mode text color */
+            cursor: center;
+        }
+
+        .equal:hover {
+            background-color: #555;
+            /* dark mode hover background */
+        }
+      .del {
+            width: 210px;
+            height: 40px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #444;
+            /* dark mode background */
+            color: #fff;
+        margin-left: 23px;
+        margin-top: 5px;
+            /* dark mode text color */
+            cursor: center;
+        }
+
+        .del:hover {
+            background-color: #555;
+            /* dark mode hover background */
+        }
+      footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.7;
+      animation: heartbeat 1.3s ease-in-out infinite;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+        }
+          @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .link {
+      color: #FF9100;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .link:hover {
+      color: #FFB74D;
+    }
+    </style>
+</head>
+
+<body>
+  <!--<div class="container">
+    <h1 class="text-center animated" style="color: #1E1E1E; margin-bottom: 3px;">Markdevs69<mark style="font-weight: bold; font-size: 8px; color: var(--onyx); margin-top: 0px; background-color: #000000; text-align: center; border-radius: 2px;">Rest<mark style="font-weight: bold; font-size: 8px; color: #000000; margin-top: 0px; background-color: #FF9100; text-align: center; border-radius: 2px;">API</mark></h1>-->
+    
+    <div class="calculator">
+        <input type="text" id="display" class="display" readonly>
+        <div class="button-container">
+            <button class="button" onclick="clickButton(this)">1</button>
+            <button class="button" onclick="clickButton(this)">2</button>
+            <button class="button" onclick="clickButton(this)">/</button>
+            <button class="button" onclick="clickButton(this)">3</button>
+            <button class="button" onclick="clickButton(this)">4</button>
+            <button class="button" onclick="clickButton(this)">*</button>
+            <button class="button" onclick="clickButton(this)">5</button>
+            <button class="button" onclick="clickButton(this)">6</button>
+            <button class="button" onclick="clickButton(this)">+</button>
+            <button class="button" onclick="clickButton(this)">7</button>
+            <button class="button" onclick="clickButton(this)">8</button>
+            <button class="button" onclick="clickButton(this)">-</button>
+            <button class="button" onclick="clickButton(this)">9</button>
+            <button class="button" onclick="clickButton(this)">0</button>
+            <button class="button" onclick="clickButton(this)">.</button>
+            <!--<button class="button" onclick="clickButton(this)">=</button>-->
+            <button class="del" onclick="deleteLastChar()">DEL</button>
+           <!-- <button class="button" onclick="clearEntry()">C</button>-->
+          <button class="equal" onclick="clickButton(this)">=</button>
+        </div>
+    </div>
+  <footer>
+          <p style="color: #fff">Made with &#129505; by <a class="link" href="https://www.facebook.com/mark.dev69">Markdevs69</a></p>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
