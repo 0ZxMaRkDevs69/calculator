@@ -29,7 +29,7 @@ function clickButton(button) {
     try {
       let result = eval(expression);
       if (result === 6) {
-        display.value = "Kiss ko bi HAHAHA";
+        display.value = "Missyou HAHAHA";
       } else {
         display.value = result;
       }
